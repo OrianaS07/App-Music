@@ -1,0 +1,31 @@
+<div class="side-bar">
+    <div><h1 class="logo">Spotify-Copy</h1></div>
+    <!-- lista 1 -->
+    <ul class="side-bar_list list-one">
+        <li [routerLink]="item.router" *ngFor="let item of mainMenu.defaultOptions">
+            <div class="list-wrapper-item">
+                <i [ngClass]="['uil',item.icon]"></i>
+                <span class="side-bar_list list-label">{{item.name}}</span>
+            </div>
+        </li>
+    </ul>
+    <div class="side-bar_separator"></div>
+    <!-- list 2 -->
+    <ul class="side-bar_list list-two">
+        <li *ngFor="let item of mainMenu.accessLink">
+            <div class="list-wrapper-item">
+                <i [ngClass]="['uil',item.icon]"></i>
+                <span class="side-bar_list list-label">{{item.name}}</span>
+            </div>
+        </li>
+    </ul>
+    <div class="side-bar_separator line-separator"></div>
+    <!-- lista 3 -->
+    <ul class="side-bar_list list-three">
+        <li *ngFor="let item of mainMenu.customOptions">
+            <div class="list-wrapper-item">
+                <span class="side-bar_list list-label">{{item.name}}</span>
+            </div>
+        </li>
+    </ul>
+</div>
